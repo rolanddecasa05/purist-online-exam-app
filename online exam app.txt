@@ -1,0 +1,20 @@
+online exam app
+Phase 1
+- Users
+    can upload Exams (CRUD) e.g Excel,
+    can check the results of the exam
+    can generate link to the exam with expiration
+    can set the passing score
+    can notify examinees for the results e.g Email
+    can print out the examinees results
+
+Exams format
+    multiple choice
+
+- Examinees
+    can answer the exam given by the users
+    can view the results of the exam
+
+- Admin/System
+    auto notify to the users and Examinees (bool)
+    store examinees information (CRUD)
