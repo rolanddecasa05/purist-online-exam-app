@@ -18,3 +18,21 @@ Exams format
 - Admin/System
     auto notify to the users and Examinees (bool)
     store examinees information (CRUD)
+
+TODO's !!!
+
+02-14-2021
+    - setup email and fb 3rd party signup and email notification.
+    - jetstream installation teams and inertia js.
+    - remarks: done
+
+next sessions:
+Backend:
+    setup uploader
+    set up local driver for excel csv storage
+    set up table for user who uploaded the exam
+    create role for facilitator for examinees
+
+Frontend:
+    design login and dashboard
+
