@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Open Routes
+Route::group(['namespace' => 'api'], function () 
+{
+    Route::post('/login', [AuthController::class, 'login']);
+
+    Route::get('/login-app', [AuthController::class, 'thirdPartyLogin']);
+
+    Route::get('/login/third-party/callback', [AuthController::class, 'thirdPartyCallback']);
+});
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+

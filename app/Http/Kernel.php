@@ -3,7 +3,7 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-
+use Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful;
 class Kernel extends HttpKernel
 {
     /**
@@ -41,6 +41,8 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+            \Illuminate\Session\Middleware\StartSession::class, // --> this solved the problem Request not set on store
+            EnsureFrontendRequestsAreStateful::class,
             'throttle:api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
